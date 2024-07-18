@@ -6,7 +6,7 @@
 
 ชื่อ-สกุล : กานต์ ปราศัย
 
-Vercel URL :
+Vercel URL : https://lab08-2567-660610742.vercel.app/
 
 ---
 
