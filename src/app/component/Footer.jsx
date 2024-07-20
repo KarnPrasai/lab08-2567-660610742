@@ -4,10 +4,12 @@ export default function Footer(props) {
   return (
     <div className="mt-3">
         <p className="text-secondary text-center">
-          copyright © 2023 Chayanin Suatap 12345678
+          copyright © {props.year} {props.name} {props.studentID}
         </p>
-
+        <props className="year"></props>
         <props className="name"></props>
+        <props className="studentID"></props>
+        
       </div>
   )
 }

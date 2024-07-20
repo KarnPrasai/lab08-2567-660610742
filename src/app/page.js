@@ -1,7 +1,16 @@
 import Header from "./component/Header";
 import Footer from "./component/Footer";
+import TaskInput from "./component/Taskinput";
+import Task from "./component/Task";
 
 export default function Home() {
+
+  const tasks = [
+    { id: 1, name: "Read a book", isDone: true },
+    { id: 2, name: "Take a shower", isDone: false },
+    { id: 3, name: "Sleep", isDone: false }
+  ]
+
   return (
     // Main container
     <div className="container mx-auto">
@@ -14,35 +23,17 @@ export default function Home() {
       {/* tasks container */}
       <div style={{ maxWidth: "400px" }} className="mx-auto">
         {/* task input */}
-        <div className="d-flex gap-1">
-          <input
-            className="form-control"
-            placeholder="Insert a task here.."
-          ></input>
-          <button className="btn btn-primary">Add</button>
-        </div>
+        <TaskInput />
         {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Read a book</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
-        {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Take a shower</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
-        {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Sleep</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
+        
+        <Task props={{id: tasks[0].id,name: tasks[0].name, isDone: tasks[0].isDone }} />
+        <Task props={{id: tasks[1].id,name: tasks[1].name, isDone: tasks[1].isDone }} />
+        <Task props={{id: tasks[2].id,name: tasks[2].name, isDone: tasks[2].isDone }} />
+
       </div>
 
       {/* //footer section */}
-      
+      <Footer year = "2024" name = "Karn Prasai" studentID = "660610742"/>
     </div>
   );
 }
